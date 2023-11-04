@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="#" />
+    <title>Datos</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="1-script.js"></script>
+
+  </head>
+  <body onload="verifySession()">
+    <div class="contenedor">
+      <h3>Por favor ingrese los datos solicitados</h3> 
+
+      <!--formulario automóvil-->
+      <form id="login-form">
+        <h3>Automóvil</h3>
+
+        <div class="elemento">
+          <label for="numeroPlaca">Número de Placa:</label>
+          <input type="text" id="numeroPlaca" name="numeroPlaca" required /><br />
+        </div>
+
+        <div class="elemento">
+          <label for="marca">Marca:</label>
+          <input type="text" id="marca" name="marca" required /><br />
+        </div>
+
+        <div class="elemento">
+          <label for="modelo">Modelo:</label>
+          <input type="text" id="modelo" name="modelo" required /><br />
+        </div>
+
+        <div class="elemento">
+          <label for="tipoVehiculo">Tipo de Vehículo:</label>
+          <input type="text" id="tipoVehiculo" name="tipoVehiculo" required /><br />
+        </div>
+        
+        <div class="elemento">
+          <button type="button" onclick="registerAuto()">Registrar Vehiculo!</button>
+        </div>
+        
+      </form><br>
+
+      <!--formulario empleado-->
+      <form id="login-form">
+        <h3>Empleado</h3>
+
+        <div class="elemento">
+          <label for="nombre">Nombre:</label>
+          <input type="text" id="nombre" name="nombre" required /><br />
+        </div>
+
+        <div class="elemento">
+          <label for="tel">Tel:</label>
+          <input type="text" id="tel" name="tel" required /><br />
+        </div>
+
+        <div class="elemento">
+          <button type="button" onclick="registerWorker()">Registrar Empleado!</button>
+        </div>
+
+      </form><br>
+
+      <!--formulario servicio-->
+      <form id="login-form">
+        <h3>Servicio</h3>
+
+        <div class="elemento">
+          <h4>Por favor digita el servicio a requerir (Lavado básico, Lavado y Encerado, Lavado Detallado (interior y exterior), Todo en uno)</h4>
+          <label for="tipoServicio">Tipo de Servicio:</label>
+          <input type="text" id="tipoServicio" name="tipoServicio" required><br>
+        </div>
+
+        <div class="elemento">
+          <label for="precio">Precio:</label>
+          <input type="text" id="precio" name="precio" required><br>
+        </div>
+
+        <div class="elemento">
+          <label for="userId">Selecione el Usuario:</label>
+          <select id="userId" name="userId" required>
+              <option value="1">Usuario 1</option>
+              <option value="2">Usuario 2</option>
+              <option value="3">Usuario 3</option>
+              <option value="4">Usuario 4</option>
+              <!-- Agrega más opciones según tus usuarios --> 
+          </select><br>
+        </div>
+
+        <div class="elemento">
+          <label for="autoId">Seleccione el Vehiculo:</label>
+          <select id="autoId" name="autoId" required>
+              <option value="1">Vehiculo 1</option>
+              <option value="2">Vehiculo 2</option>
+              <option value="3">Vehiculo 3</option>
+              <option value="4">Vehiculo 4</option>
+              <!-- Agrega más opciones según tus automóviles -->
+          </select><br>
+        </div>
+
+        <div class="elemento">
+          <label for="workerId">Empleado:</label>
+          <select id="workerId" name="workerId" required>
+              <option value="1">Empleado 1</option>
+              <option value="2">Empleado 2</option>
+              <option value="3">Empleado 3</option>
+              <option value="4">Empleado 4</option>
+          <!-- Agrega más opciones según tus trabajadores -->
+          </select><br>
+        </div>
+
+        <div class="elemento">
+          <button type="button" onclick="registerService()">Registrar Servicio!</button>
+        </div>
+      
+      </form><br>
+
+      <!--formulario Carrito-->
+      <div id="login-form">
+        <h3>Carrito de Compra</h3>
+
+        <div class="elemento">
+          <label for="cantidad">Cantidad:</label>
+          <input type="text" id="cantidad" name="cantidad" required><br>
+        </div>
+
+        <div class="elemento">
+          <label for="serviceId">Seleccione el Servicio:</label>
+          <select id="serviceId" name="serviceId" required></select><br>
+        </div>
+
+        <div class="elemento">
+          <button type="button" onclick="registerCarrito()">Gestionar Carrito!</button>
+        </div>
+        
+      </div><br>
+
+      <!--formulario Pago-->
+      <form id="login-form">
+        <h3>Generar Pago</h3>
+
+        <div class="elemento">
+          <label for="metodoPago">Metodo de Pago:</label><br>
+          <select id="metodoPago" name="metodoPago">
+            <option value="card">Card</option>
+            <option value="cash">Cash</option>
+          </select><br>
+        </div>
+
+        <div class="elemento">
+          <label for="fecha">Fecha:</label><br>
+          <input type="text" id="fecha" required/><br>
+        </div>
+
+        <div class="elemento">
+          <label for="monto">Monto:</label><br>
+          <input type="text" id="monto" required/><br>
+        </div>
+
+      </form>  
+
+      <div class="elemento">
+        <button type="button" onclick="registerPay()">Realizar Pago</button>
+      </div>
+     
+      <div class="elemento">
+        <button type="button" onclick="logout()">Cerrar Sesión</button>
+      </div>
+
+    </div>
+
+    
+    <script src="2-script.js"></script>
+    
+  </body>
+</html>
